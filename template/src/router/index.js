@@ -20,7 +20,7 @@ export default new Router({
 /**
  * 预留钩子
  */
-router.beforeEach((to, from, next) => {
+Router.beforeEach((to, from, next) => {
   if(to.meta.requuireAuth) {
     if (localStorage.getItem('userName') !== null) {
       next();

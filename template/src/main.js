@@ -9,6 +9,7 @@ import router from './router'
 {{/router}}
 {{#axios}}
 import axios from './axios'
+Vue.http = Vue.prototype.$http = axios
 {{/axios}}
 {{#vuex}}
 import store from './store'
