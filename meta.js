@@ -75,10 +75,12 @@ module.exports = {
       message: 'Install vue-router?',
     },
     axios: {
+      when: 'isNotTest',
       type: 'confirm',
       message: 'Install axios?',
     },
     vuex: {
+      when: 'isNotTest',
       type: 'confirm',
       message: 'Install vuex?',
     },
