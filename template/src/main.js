@@ -14,6 +14,7 @@ Vue.http = Vue.prototype.$http = axios
 {{#vuex}}
 import store from './store'
 {{/vuex}}
+import locale from 'element-ui/lib/locale/lang/en'
 import 'normalize.css/normalize.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
