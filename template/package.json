@@ -26,15 +26,19 @@
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}
-  },
-  "devDependencies": {
+    "vue-router": "^3.0.1"{{/router}},
     {{#axios}}
     "axios": "^0.18.0",
     {{/axios}}
     {{#vuex}}
     "vuex": "^3.1.0",
     {{/vuex}}
+    "element-ui": "2.4.6",
+    "js-cookie": "2.2.0",
+    "normalize.css": "7.0.0",
+    "nprogress": "0.2.0",
+  },
+  "devDependencies": {
     {{#lint}}
     "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
