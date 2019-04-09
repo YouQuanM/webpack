@@ -26,15 +26,15 @@
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}},
+    "vue-router": "^3.0.1"{{/router}}
+  },
+  "devDependencies": {
     {{#axios}}
     "axios": "^0.18.0",
     {{/axios}}
     {{#vuex}}
-    "vuex": "^3.1.0"
+    "vuex": "^3.1.0",
     {{/vuex}}
-  },
-  "devDependencies": {
     {{#lint}}
     "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
