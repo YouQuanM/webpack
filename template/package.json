@@ -111,6 +111,7 @@
     "webpack-bundle-analyzer": "^2.9.0",
     "less-loader": "^4.1.0",
     "node-notifier": "^5.1.2",
+    "node-sass": "^4.11.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
