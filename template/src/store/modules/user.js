@@ -1,4 +1,4 @@
-import { login, logout, getInfo } from '@/api/login'
+import { login, logout, getInfo, getMenu } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 
 const user = {
@@ -6,7 +6,8 @@ const user = {
     token: getToken(),
     name: '',
     avatar: '',
-    roles: []
+    roles: [],
+    menu: []
   },
 
   mutations: {
@@ -21,6 +22,9 @@ const user = {
     },
     SET_ROLES: (state, roles) => {
       state.roles = roles
+    },
+    SET_MENU: (state, menu) => {
+      state.menu = menu
     }
   },
 
@@ -52,6 +56,19 @@ const user = {
           }
           commit('SET_NAME', data.name)
           commit('SET_AVATAR', data.avatar)
+          resolve(response)
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+
+    // 获取动态菜单
+    GetMenu ({ commit }, username) {
+      return new Promise((resolve, reject) => {
+        getMenu(username).then(response => {
+          const data = response.data
+          commit('SET_MENU', data)
           resolve(response)
         }).catch(error => {
           reject(error)

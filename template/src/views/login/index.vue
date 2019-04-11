@@ -90,9 +90,15 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
+          // 登录
           this.$store.dispatch('Login', this.loginForm).then(() => {
-            this.loading = false
-            this.$router.push({ path: this.redirect || '/' })
+            // 获取菜单
+            this.$store.dispatch('GetMenu', this.loginForm.username.trim()).then(response => {
+              const data = response.data
+              this.$router.addRoutes(data)
+              this.loading = false
+              this.$router.push({ path: this.redirect || '/' })
+            })
           }).catch(() => {
             this.loading = false
           })

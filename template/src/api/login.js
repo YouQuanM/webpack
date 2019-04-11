@@ -25,3 +25,10 @@ export function logout () {
     method: 'post'
   })
 }
+
+export function getMenu(username) {
+  return request({
+    url: '/user/getMenu',
+    method: 'post'
+  })
+}
