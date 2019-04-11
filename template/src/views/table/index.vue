@@ -9,33 +9,38 @@
       highlight-current-row>
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
+          {{#rouuter}}
           {{ scope.$index }}
+          {{/router}}
         </template>
       </el-table-column>
       <el-table-column label="Title">
         <template slot-scope="scope">
+          {{#rouuter}}
           {{ scope.row.title }}
+          {{/router}}
         </template>
       </el-table-column>
       <el-table-column label="Author" width="110" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>
+            {{#rouuter}}{{ scope.row.author }}{{/rouuter}}</span>
         </template>
       </el-table-column>
       <el-table-column label="Pageviews" width="110" align="center">
         <template slot-scope="scope">
-          {{ scope.row.pageviews }}
+          {{#rouuter}}{{ scope.row.pageviews }}{{/rouuter}}
         </template>
       </el-table-column>
       <el-table-column class-name="status-col" label="Status" width="110" align="center">
         <template slot-scope="scope">
-          <el-tag :type="scope.row.status | statusFilter">{{ scope.row.status }}</el-tag>
+          <el-tag :type="scope.row.status | statusFilter">{{#rouuter}}{{ scope.row.status }}{{/rouuter}}</el-tag>
         </template>
       </el-table-column>
       <el-table-column align="center" prop="created_at" label="Display_time" width="200">
         <template slot-scope="scope">
           <i class="el-icon-time"/>
-          <span>{{ scope.row.display_time }}</span>
+          <span>{{#rouuter}}{{ scope.row.display_time }}{{/rouuter}}</span>
         </template>
       </el-table-column>
     </el-table>
