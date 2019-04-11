@@ -1,4 +1,5 @@
 import { param2Obj } from './utils'
+import Layout from '../src/views/layout/Layout'
 
 const tokens = {
   admin: {
